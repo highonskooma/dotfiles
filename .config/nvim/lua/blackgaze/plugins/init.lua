@@ -1,0 +1,9 @@
+return {
+	"nvim-lua/plenary.nvim", -- lua functions that many plugins use
+  "christoomey/vim-tmux-navigator", -- tmux & split window navigation
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
+	"neovim/nvim-lspconfig",
+	"mfussenegger/nvim-lint",
+	"airblade/vim-gitgutter"
+}
