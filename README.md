@@ -18,4 +18,4 @@ New files cannot be added directly to the dotfiles directory, instead:
 
 1. Make sure to create the file on the default config location.
 2. Copy the file/directory into ~/dotfiles.
-3. Run stow with the adopt files (this will create the new symlinks).
+3. Run stow with the adopt flag (this will create the new symlinks).
