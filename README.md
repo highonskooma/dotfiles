@@ -1,18 +1,18 @@
-## My Personal dotfiles
+# My Personal dotfiles
 
 Managed with gnu stow.
 
-# Instructions
+## Instructions
 
 1. Copy configuration file into ~/dotfiles directory following the same structure as the home folder.
-2. Before running stow . make sure to commit any unsaved changes.
+2. Before running `stow .` make sure to commit any unsaved changes.
 
-# For dealing with directories
+## For dealing with directories
 
 1. Copy the whole directory to the corresponding ~/dotfiles location.
-2. Run stow with the --adopt flag: stow -adopt .
+2. Run stow with the --adopt flag: `stow --adopt .`.
 
-# New files/directories (plugins, extra configuration...)
+## New files/directories (plugins, extra configuration...)
 
 New files cannot be added directly to the dotfiles directory, instead:
 
