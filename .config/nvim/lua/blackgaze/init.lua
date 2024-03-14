@@ -1,5 +1,5 @@
 require("blackgaze.remap")
-print("hello from lua dir")
+-- print("hello from lua dir")
 
 vim.o.clipboard = 'unnamedplus'
 
@@ -20,3 +20,5 @@ vim.o.mouse = 'a'
 vim.updatetime = 100
 
 vim.signcolumn = 'on'
+
+vim.o.cmdheight = 0
