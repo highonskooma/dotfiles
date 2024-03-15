@@ -48,7 +48,7 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 1
+new_window pixel 0
 
 # thin borders
 # hide_edge_borders both
@@ -164,7 +164,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod + Return exec alacritty msg create-window || alacritty
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $mod+Shift+q kill
 
 # exit-menu
 bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
@@ -350,7 +350,7 @@ for_window [class=TelegramDesktop] focus
 #exec_always --no-startup-id picom -b
 #
 # for custom config:
-exec_always --no-startup-id picom --config  ~/.config/picom.conf
+# exec_always --no-startup-id picom --config  ~/.config/picom.conf
 
 #############################################
 # autostart applications/services on login: #
@@ -385,7 +385,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/eos_wallpapers_community/ARM-CASSINI-abstract.png
+exec --no-startup-id sleep 1 && feh --bg-fill /home/blackgaze/Pictures/wallpaper/second-collection/waves/dracula-waves-44475a.png 
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -498,9 +498,9 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		font pango: Noto Sans Regular 8 
+		font pango: Noto Sans Regular 10
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	    	position bottom
+	    	position top 
 #	    	i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
@@ -578,6 +578,11 @@ bindsym $mod+t exec --no-startup-id rofi -show window \
 
 ## rofi bindings to manage clipboard (install rofi-greenclip from the AUR)
 
-#exec --no-startup-id greenclip daemon>/dev/null
-#bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
+# exec --no-startup-id greenclip daemon>/dev/null
+# bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
 #		-config ~/.config/rofi/rofidmenu.rasi
+
+#########################
+# Enable VMWare Toolkit #
+#########################
+exec systemctl enable --now vmtoolsd

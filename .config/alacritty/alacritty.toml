@@ -1,7 +1,7 @@
 working_directory = "/home/blackgaze"
 
 import = [
-    "~/.config/alacritty/themes/themes/dracula.toml"
+    "~/.config/alacritty/themes/themes/catppuccin.toml"
 ]
 
 # Adds this many blank pixels of padding around the window
