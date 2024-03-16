@@ -161,7 +161,7 @@ bindsym $mod+r mode "resize"
 
 # start a terminal
 # bindsym $mod+Return exec --no-startup-id alacritty 
-bindsym $mod + Return exec alacritty msg create-window || alacritty
+bindsym $mod + Return exec --no-startup-id alacritty msg create-window || alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -264,7 +264,7 @@ bindsym $mod+XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Mast
 bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_mute
 
 # mic mute toggle
-bindsym XF86AudioMicMute exec amixer sset Capture toggle
+bindsym XF86AudioMicMute exec --no-startup-id amixer sset Capture toggle
 
 # audio control
 bindsym XF86AudioPlay exec --no-startup-id playerctl play
@@ -398,7 +398,7 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 #exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
 
 # set resolution
-exec xrandr -s 1920x1080 
+exec --no-startup-id xrandr -s 1920x1080 
 
 # xscreensaver
 # https://www.jwz.org/xscreensaver
