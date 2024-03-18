@@ -10,4 +10,5 @@ vim.o.termguicolors = true
 vim.o.mouse = 'a'
 vim.updatetime = 100
 vim.signcolumn = 'on'
-vim.o.cmdheight = 0
+vim.o.cmdheight = 1
+vim.o.scrolloff = 10
