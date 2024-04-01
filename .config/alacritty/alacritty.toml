@@ -1,0 +1,16 @@
+working_directory = "/home/blackgaze"
+
+import = [
+    "~/.config/alacritty/themes/themes/catppuccin.toml"
+]
+
+[font]
+size = 10.0
+
+[window]
+dimensions = { columns = 105, lines = 25 }
+opacity = 0.3
+# blur = true     --works only on wayland
+
+[colors]
+transparent_background_colors = true
