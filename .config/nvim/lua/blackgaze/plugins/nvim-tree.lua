@@ -38,7 +38,8 @@ return {
 				group_empty = true,
 			},
 			filters = {
-				dotfiles = true,
+				dotfiles = false,
+				git_ignored = false,
 			},
 			on_attach = my_on_attach,
 		})
