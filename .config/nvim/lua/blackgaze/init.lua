@@ -12,3 +12,5 @@ vim.updatetime = 100
 vim.signcolumn = 'on'
 vim.o.cmdheight = 0
 vim.o.scrolloff = 10
+vim.opt.list = false
+-- vim.opt.listchars = false

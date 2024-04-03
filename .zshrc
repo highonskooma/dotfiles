@@ -96,9 +96,15 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-alias ls="eza -lah"
+
+# eza aliases
+alias ls="eza -a --color=always --group-directories-first --icons"
+alias la="eza -lah --color=always --group-directories-first --icons"
+alias lt="eza -aT --color=always --group-directories-first --icons"
+#other aliases
 alias update="yay -Syu && sudo pacman -Syu"
+alias cat="bat"
+alias gs="git status"
 #
 fastfetch
 source /home/blackgaze/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
