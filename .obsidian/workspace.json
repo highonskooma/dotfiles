@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "f6abe5910c092b2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b681b7259221a57",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4bf9600527c33f98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b52181bc65f648da",
+    "type": "split",
+    "children": [
+      {
+        "id": "00df79e384b4353c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "160eb5e44a2e91c6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "020231aef2b7a126",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "415c28597ff5d917",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "173c5cb1f047fa5d",
+    "type": "split",
+    "children": [
+      {
+        "id": "70324302cddf3157",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "acc4bb138c938e6c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e7ad01b079c773b4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "64219575cafe6b97",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f77884b55a93a683",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4bf9600527c33f98",
+  "lastOpenFiles": [
+    ".git/logs/refs/remotes/origin/endeavouros",
+    ".git/logs/refs/remotes/origin/HEAD",
+    ".config/polybar/shapes/scripts/rofi/styles.rasi",
+    ".config/polybar/shapes/scripts/rofi/powermenu.rasi",
+    ".config/polybar/shapes/scripts/rofi/networkmenu.rasi",
+    ".config/polybar/shapes/scripts/rofi/message.rasi",
+    ".config/polybar/shapes/scripts/rofi/launcher.rasi",
+    ".config/polybar/shapes/scripts/rofi/confirm.rasi",
+    ".config/polybar/shapes/scripts/rofi/colors.rasi",
+    ".config/polybar/shades/scripts/rofi/styles.rasi",
+    ".config/polybar/shades/scripts/rofi/powermenu.rasi",
+    ".config/polybar/panels/wallpapers/zorin.png",
+    ".config/polybar/panels/wallpapers/xubuntu.png",
+    ".config/polybar/panels/wallpapers/ubuntu.jpg",
+    ".config/polybar/panels/wallpapers/mint.jpg",
+    ".config/polybar/panels/wallpapers/liri.png",
+    ".config/polybar/panels/wallpapers/kde_2.jpg",
+    ".config/polybar/panels/wallpapers/kde.jpg",
+    ".config/polybar/panels/wallpapers/gnome.jpg",
+    ".config/polybar/panels/wallpapers/elementary_2.jpg",
+    ".config/polybar/panels/wallpapers/elementary.jpg",
+    "README.md"
+  ]
+}

@@ -6,4 +6,5 @@ return {
 	"neovim/nvim-lspconfig",
 	"mfussenegger/nvim-lint",
 	"airblade/vim-gitgutter",
+	"github/copilot.vim",
 }

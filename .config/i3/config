@@ -196,10 +196,10 @@ bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_bri
 bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
 
 # change focus
-bindsym $mod+j focus left
+# bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+b focus up
-bindsym $mod+o focus right
+# bindsym $mod+o focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -280,6 +280,8 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 bindsym $mod+w exec --no-startup-id /usr/bin/firefox
 bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym $mod+o exec --no-startup-id /usr/bin/obsidian
+bindsym $mod+t exec --no-startup-id /usr/bin/thunar
 
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
@@ -330,15 +332,14 @@ exec --no-startup-id xrandr --output DisplayPort-1 --set TearFree on
 assign [class="Xfce4-terminal"] $ws1
 assign [class="(?i)firefox"] $ws2
 assign [class="Thunar"] $ws3
-assign [class="thunderbird"] $ws4
-assign [class="TelegramDesktop"] $ws5
+assign [class="obsidian"] $ws3
+assign [class="discord"] $ws4
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Xfce4-terminal] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
-for_window [class=Thunderbird] focus
-for_window [class=TelegramDesktop] focus
+for_window [class=obsidian] focus
 
 ##############
 # compositor #
@@ -528,8 +529,6 @@ bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
 
 # bindsym $mod+t exec --no-startup-id rofi -show window \
 # 		-config ~/.config/rofi.blackgaze/rofidmenu.rasi
-
-bindsym $mod+t exec --no-startup-id rofi -show window -theme ~/.config/rofi/launchers/type-1/style-1.rasi
 
 #bindsym F10 exec --no-startup-id rofi -show window \
 #		-config ~/.config/rofi/rofidmenu.rasi

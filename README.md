@@ -2,7 +2,7 @@
 
 Managed with gnu stow.
 
-## Instructions
+## Instructions 
 
 1. Copy configuration file into ~/dotfiles directory following the same structure as the home folder.
 2. Before running `stow .` make sure to commit any unsaved changes.
