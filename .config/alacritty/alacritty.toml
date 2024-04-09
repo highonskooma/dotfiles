@@ -1,7 +1,7 @@
 working_directory = "/home/blackgaze"
 
 import = [
-    "~/.config/alacritty/themes/themes/catppuccin.toml"
+    "~/.config/alacritty/themes/alacritty-theme/themes/challenger_deep.toml"
 ]
 
 [font]
@@ -9,7 +9,7 @@ size = 10.0
 
 [window]
 dimensions = { columns = 91, lines = 24 }
-opacity = 0.3
+opacity = 0.5
 # blur = true     --works only on wayland
 
 [colors]
