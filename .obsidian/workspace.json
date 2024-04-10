@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1b681b7259221a57",
+        "id": "76f69a2a15c3224e",
         "type": "tabs",
         "children": [
           {
-            "id": "4bf9600527c33f98",
+            "id": "ac326797ca66e2a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,29 +146,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4bf9600527c33f98",
+  "active": "ac326797ca66e2a2",
   "lastOpenFiles": [
+    ".git/index.lock",
+    ".stow-local-ignore~",
+    ".attachments/5.png",
+    ".attachments/2024-04-10-23:25:04-screenshot.png",
+    ".attachments/2.png",
+    "README.md",
+    ".attachments/3.png",
+    ".attachments/4.png",
+    ".attachments/1.png",
+    ".attachments/2024-04-10-23:10:17-screenshot.png",
+    ".attachments/2024-04-10-23:10:06-screenshot.png",
+    ".attachments/2024-04-10-09:49:03-screenshot.png",
+    ".attachments/2024-04-09-23:14:08-screenshot.png",
+    ".attachments",
+    "attachments",
     ".git/logs/refs/remotes/origin/endeavouros",
     ".git/logs/refs/remotes/origin/HEAD",
     ".config/polybar/shapes/scripts/rofi/styles.rasi",
     ".config/polybar/shapes/scripts/rofi/powermenu.rasi",
     ".config/polybar/shapes/scripts/rofi/networkmenu.rasi",
     ".config/polybar/shapes/scripts/rofi/message.rasi",
-    ".config/polybar/shapes/scripts/rofi/launcher.rasi",
-    ".config/polybar/shapes/scripts/rofi/confirm.rasi",
-    ".config/polybar/shapes/scripts/rofi/colors.rasi",
-    ".config/polybar/shades/scripts/rofi/styles.rasi",
-    ".config/polybar/shades/scripts/rofi/powermenu.rasi",
-    ".config/polybar/panels/wallpapers/zorin.png",
-    ".config/polybar/panels/wallpapers/xubuntu.png",
-    ".config/polybar/panels/wallpapers/ubuntu.jpg",
-    ".config/polybar/panels/wallpapers/mint.jpg",
-    ".config/polybar/panels/wallpapers/liri.png",
-    ".config/polybar/panels/wallpapers/kde_2.jpg",
-    ".config/polybar/panels/wallpapers/kde.jpg",
-    ".config/polybar/panels/wallpapers/gnome.jpg",
-    ".config/polybar/panels/wallpapers/elementary_2.jpg",
-    ".config/polybar/panels/wallpapers/elementary.jpg",
-    "README.md"
+    ".config/polybar/shapes/scripts/rofi/launcher.rasi"
   ]
 }

@@ -4,6 +4,8 @@ working_directory = "/home/blackgaze"
 #     "~/.config/alacritty/themes/alacritty-theme/themes/dracula.toml"
 # ]
 
+import=["~/.cache/wal/alacritty.toml"]
+
 [font]
 size = 10.0
 
@@ -12,32 +14,3 @@ dimensions = { columns = 91, lines = 24 }
 opacity = 0.8 
 # blur = true     --works only on wayland
 
-# [colors]
-# transparent_background_colors = true
-# BEGIN ACE
-colors:
-  primary:
-    background: '#0E0B20'
-    foreground: '#c5e5ec'
-  cursor:
-    text:       '#0E0B20'
-    cursor:     '#c5e5ec'
-  normal:
-    black:      '#0E0B20'
-    red:        '#AA09E4'
-    green:      '#F10BD7'
-    yellow:     '#F86FEE'
-    blue:       '#D698EC'
-    magenta:    '#F991F6'
-    cyan:       '#F5AEFA'
-    white:      '#c5e5ec'
-  bright:
-    black:      '#89a0a5'
-    red:        '#AA09E4'
-    green:      '#F10BD7'
-    yellow:     '#F86FEE'
-    blue:       '#D698EC'
-    magenta:    '#F991F6'
-    cyan:       '#F5AEFA'
-    white:      '#c5e5ec'
-# END ACE
