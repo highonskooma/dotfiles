@@ -2,20 +2,25 @@
 <img src="https://avatars.githubusercontent.com/u/49491057?v=4  " width="100px" />
 <br>highonskooma's dotfiles<br>
 </h1>
+</br>
+</br>
 
 ## 🖼️ Gallery
 
-![[2.png]]
-![[3.png]]
-![[5.png]]
+![](.attachments/2.png)
+![](.attachments/3.png)
+![](.attachments/5.png)
+
+</br>
 
 ## Features
----
 A Dynamic theme can be applied to the system based on the main colors of a wallpaper.
 A script is run at every login that picks a random wallpapers from my wallpapers folder and uses [pywal](https://github.com/dylanaraps/pywal) to create a corresponding color scheme. This color scheme can be applied to [alacritty](https://alacritty.org/), [polybar](https://github.com/polybar/polybar), [neovim](https://neovim.io/) and [rofi](https://github.com/davatorium/rofi).
 
+</br>
+</br>
+
 ## Scripts
---- 
  -  wallpaperRandomizer.sh
 
 ```sh
@@ -47,9 +52,9 @@ fi
 
  - [pywal.sh](.config/polybar/colorblocks/scripts/pywal.sh) - from [polybar-themes](https://github.com/adi1090x/polybar-themes).
 
+</br>
 
 ## Theme specific configuration
----
 My [alacritty](.config/alacritty/alacritty.toml) config imports a color scheme from `.config/wal/templates` like described [here](https://github.com/dylanaraps/pywal/pull/611#issuecomment-1922063972).
 In neovim, I just use [wal.vim](https://github.com/dylanaraps/wal.vim).
 
