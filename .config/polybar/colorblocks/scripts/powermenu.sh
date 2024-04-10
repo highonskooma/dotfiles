@@ -34,6 +34,7 @@ msg() {
 
 # Variable passed to rofi
 options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+wm_command=$(ps -p $(pgrep -u $USER i3) -o cmd=)
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 0)"
 case $chosen in
@@ -79,11 +80,11 @@ case $chosen in
     $logout)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-			if [[ "$DESKTOP_SESSION" == "Openbox" ]]; then
+			if [[ "$wm_command" == "Openbox" ]]; then
 				openbox --exit
-			elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
+			elif [[ "$wm_command" == "bspwm" ]]; then
 				bspc quit
-			elif [[ "$DESKTOP_SESSION" == "i3" ]]; then
+			elif [[ "$wm_command" == "i3" ]]; then
 				i3-msg exit
 			fi
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then

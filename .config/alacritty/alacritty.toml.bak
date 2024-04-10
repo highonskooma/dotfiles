@@ -1,0 +1,16 @@
+working_directory = "/home/blackgaze"
+
+# import = [
+#     "~/.config/alacritty/themes/alacritty-theme/themes/dracula.toml"
+# ]
+
+[font]
+size = 10.0
+
+[window]
+dimensions = { columns = 91, lines = 24 }
+opacity = 0.8 
+# blur = true     --works only on wayland
+
+# [colors]
+# transparent_background_colors = true

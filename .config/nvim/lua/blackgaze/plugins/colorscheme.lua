@@ -3,10 +3,11 @@ local colorschemes = {
 	['dracula'] = 'Mofiqul/dracula.nvim',
 	['tokyonight'] = 'folke/tokyonight.nvim', -- night, storm, day, moon
 	['catppuccin'] = 'catppuccin/nvim', -- latte, frappe, macchiato, mocha
-	['gruvbox'] = 'ellisonleao/gruvbox.nvim'
+	['gruvbox'] = 'ellisonleao/gruvbox.nvim',
+	['wal'] = 'dylanaraps/wal.vim'
 }
 
-local selectedColorscheme = 'catppuccin' --change here
+local selectedColorscheme = 'wal' --change here
 local style = ''
 
 return {
