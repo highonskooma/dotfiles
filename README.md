@@ -53,13 +53,16 @@ fi
 </br>
 
 ## Theme specific configuration
-My [alacritty](.config/alacritty/alacritty.toml) config imports a color scheme from `.config/wal/templates` like described [here](https://github.com/dylanaraps/pywal/pull/611#issuecomment-1922063972).
+My [alacritty config](.config/alacritty/alacritty.toml) imports a color scheme from `.config/wal/templates` like described [here](https://github.com/dylanaraps/pywal/pull/611#issuecomment-1922063972).
 In neovim, I just use [wal.vim](https://github.com/dylanaraps/wal.vim).
 
+</br>
 
 Managed with gnu stow.
 
-## Instructions 
+</br>
+
+## Personal Notes
 
 1. Copy configuration file into ~/dotfiles directory following the same structure as the home folder.
 2. Before running `stow .` make sure to commit any unsaved changes.
