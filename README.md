@@ -3,7 +3,6 @@
 <br>highonskooma's dotfiles<br>
 </h1>
 </br>
-</br>
 
 ## 🖼️ Gallery
 
@@ -17,7 +16,6 @@
 A Dynamic theme can be applied to the system based on the main colors of a wallpaper.
 A script is run at every login that picks a random wallpapers from my wallpapers folder and uses [pywal](https://github.com/dylanaraps/pywal) to create a corresponding color scheme. This color scheme can be applied to [alacritty](https://alacritty.org/), [polybar](https://github.com/polybar/polybar), [neovim](https://neovim.io/) and [rofi](https://github.com/davatorium/rofi).
 
-</br>
 </br>
 
 ## Scripts
