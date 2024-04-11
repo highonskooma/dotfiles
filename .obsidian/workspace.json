@@ -149,6 +149,7 @@
   "active": "ac326797ca66e2a2",
   "lastOpenFiles": [
     ".git/index.lock",
+<<<<<<< Updated upstream
     ".git/objects/88/6b5ec73d85dc3a3dcbcdf8768b99691e117ec4",
     ".git/refs/remotes/origin/endeavouros.lock",
     ".git/objects/c3/7ffabbb125650880b4cc1b939a194f75b5c1db",
@@ -159,6 +160,18 @@
     ".git/objects/12/1a97ccdd759b5824bd5f2b8f834c0e3a9a4dcd",
     ".git/objects/12",
     ".git/objects/05/98abcaee9e8a1083d9f78d0c8a06956fe03891",
+=======
+    ".config/polybar/colorblocks/modules.ini~",
+    ".config/polybar/colorblocks/config.ini~",
+    ".git/objects/b5/63abdd5e0a39fe5b7e0062e2546f1f4c453cb1",
+    ".git/objects/b5",
+    ".git/objects/88/f17d1ce1e7d5646f633b1cb2d24f6695240a47",
+    ".git/objects/88",
+    ".git/objects/d8/b97a752ad47a10bcae7f465d8255133b825324",
+    ".git/objects/5a/71dece225f0d86df2a73865bfc6ad3962ab99a",
+    ".git/objects/e2/97c4a271858540a3546e65a89112aa84cc95d3",
+    ".git/objects/e2",
+>>>>>>> Stashed changes
     ".attachments/5.png",
     ".attachments/2024-04-10-23:25:04-screenshot.png",
     ".attachments/2.png",
