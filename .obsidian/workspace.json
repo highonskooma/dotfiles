@@ -149,7 +149,16 @@
   "active": "ac326797ca66e2a2",
   "lastOpenFiles": [
     ".git/index.lock",
-    ".stow-local-ignore~",
+    ".git/objects/88/6b5ec73d85dc3a3dcbcdf8768b99691e117ec4",
+    ".git/refs/remotes/origin/endeavouros.lock",
+    ".git/objects/c3/7ffabbb125650880b4cc1b939a194f75b5c1db",
+    ".git/objects/c3",
+    ".git/objects/11/ab362c8e47935dc64e3aaf3cea93c50c600c2f",
+    ".git/objects/11",
+    ".git/objects/7c/334458bad986cf6de905a9f71949f7b3e256fc",
+    ".git/objects/12/1a97ccdd759b5824bd5f2b8f834c0e3a9a4dcd",
+    ".git/objects/12",
+    ".git/objects/05/98abcaee9e8a1083d9f78d0c8a06956fe03891",
     ".attachments/5.png",
     ".attachments/2024-04-10-23:25:04-screenshot.png",
     ".attachments/2.png",
@@ -160,15 +169,6 @@
     ".attachments/2024-04-10-23:10:17-screenshot.png",
     ".attachments/2024-04-10-23:10:06-screenshot.png",
     ".attachments/2024-04-10-09:49:03-screenshot.png",
-    ".attachments/2024-04-09-23:14:08-screenshot.png",
-    ".attachments",
-    "attachments",
-    ".git/logs/refs/remotes/origin/endeavouros",
-    ".git/logs/refs/remotes/origin/HEAD",
-    ".config/polybar/shapes/scripts/rofi/styles.rasi",
-    ".config/polybar/shapes/scripts/rofi/powermenu.rasi",
-    ".config/polybar/shapes/scripts/rofi/networkmenu.rasi",
-    ".config/polybar/shapes/scripts/rofi/message.rasi",
-    ".config/polybar/shapes/scripts/rofi/launcher.rasi"
+    ".attachments/2024-04-09-23:14:08-screenshot.png"
   ]
 }
