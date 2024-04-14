@@ -335,12 +335,14 @@ assign [class="(?i)firefox"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="obsidian"] $ws3
 assign [class="discord"] $ws4
+assign [class="steam"] $ws5
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Xfce4-terminal] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=obsidian] focus
+for_window [class=steam] focus
 
 ##############
 # compositor #
@@ -416,10 +418,10 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # exec --no-startup-id sleep 1 && feh --bg-fill ~/Pictures/wallpapers/eyes.png
 
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+# exec --no-startup-id xset s 480 dpms 600 600 600
 
 # disable power saving (for example if using xscreensaver)
-#exec --no-startup-id xset -dpms
+exec --no-startup-id xset -dpms
 
 # use xautolock to use autosuspend rules for mobile devices
 # https://wiki.archlinux.org/title/Session_lock#xautolock
