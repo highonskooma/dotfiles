@@ -15,7 +15,7 @@
 
 ## 🖌️ Dynamic Theme
 A Dynamic theme can be applied to the system based on the main colors of a wallpaper.
-A script is run at every login that picks a random wallpaper from my wallpapers folder and uses [pywal](https://github.com/dylanaraps/pywal) to create a corresponding color scheme. This color scheme can be applied to [alacritty](https://alacritty.org/), [polybar](https://github.com/polybar/polybar), [neovim](https://neovim.io/) and [rofi](https://github.com/davatorium/rofi).
+A script is run at every login that picks a random wallpaper from my wallpapers folder and uses [pywal](https://github.com/dylanaraps/pywal) to create a corresponding color scheme. This color scheme can be applied to [alacritty](https://alacritty.org/), [kitty](https://sw.kovidgoyal.net/kitty/), [polybar](https://github.com/polybar/polybar), [neovim](https://neovim.io/) and [rofi](https://github.com/davatorium/rofi).
 
 </br>
 
@@ -54,7 +54,7 @@ fi
 </br>
 
 ## Theme specific configuration
-My [alacritty config](.config/alacritty/alacritty.toml) imports a color scheme from `.config/wal/templates` like described [here](https://github.com/dylanaraps/pywal/pull/611#issuecomment-1922063972).
+My [alacritty config](.config/alacritty/alacritty.toml) imports a color scheme from `.config/wal/templates` like described [here](https://github.com/dylanaraps/pywal/pull/611#issuecomment-1922063972). I've also added `include ~/.cache/wal/colors-kitty.conf` to my kitty config.
 In neovim, I just use [wal.vim](https://github.com/dylanaraps/wal.vim).
 
 </br>

@@ -342,7 +342,6 @@ for_window [class=Xfce4-terminal] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=obsidian] focus
-for_window [class=steam] focus
 
 ##############
 # compositor #
@@ -429,7 +428,7 @@ exec --no-startup-id xset -dpms
 
 # xscreensaver
 # https://www.jwz.org/xscreensaver
-#exec --no-startup-id xscreensaver --no-splash
+exec --no-startup-id xscreensaver --no-splash
 
 # Desktop notifications
 # dunst config used ~/.config/dunst/dunstrc
