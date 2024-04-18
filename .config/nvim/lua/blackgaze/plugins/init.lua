@@ -7,4 +7,5 @@ return {
 	"mfussenegger/nvim-lint",
 	"airblade/vim-gitgutter",
 	"github/copilot.vim",
+	'ellisonleao/gruvbox.nvim',
 }

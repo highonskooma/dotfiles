@@ -4,10 +4,10 @@ local colorschemes = {
 	['tokyonight'] = 'folke/tokyonight.nvim', -- night, storm, day, moon
 	['catppuccin'] = 'catppuccin/nvim', -- latte, frappe, macchiato, mocha
 	['gruvbox'] = 'ellisonleao/gruvbox.nvim',
-	['wal'] = 'dylanaraps/wal.vim'
+	['pywal'] = 'AlphaTechnolog/pywal.nvim'
 }
 
-local selectedColorscheme = 'wal' --change here
+local selectedColorscheme = 'pywal' --change here
 local style = ''
 
 return {

@@ -101,6 +101,10 @@ source $ZSH/oh-my-zsh.sh
 alias ls="eza -a --color=always --group-directories-first --icons"
 alias la="eza -lah --color=always --group-directories-first --icons"
 alias lt="eza -aT --color=always --group-directories-first --icons"
+
+# bluetooth alias
+alias bt="sudo systemctl start bluetooth && bluetuith"
+
 #other aliases
 alias update="yay -Syu && sudo pacman -Syu"
 alias cat="bat"
