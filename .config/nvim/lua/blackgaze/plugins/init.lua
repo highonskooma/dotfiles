@@ -8,4 +8,5 @@ return {
 	"airblade/vim-gitgutter",
 	"github/copilot.vim",
 	'ellisonleao/gruvbox.nvim',
+	"nvim-lua/plenary.nvim",
 }

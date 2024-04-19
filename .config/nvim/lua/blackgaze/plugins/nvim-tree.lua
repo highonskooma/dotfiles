@@ -9,7 +9,7 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		-- optionally enable 24-bit colour
-		vim.opt.termguicolors = true 
+		vim.opt.termguicolors = true
 
 		local function my_on_attach(bufnr)
 			local api = require "nvim-tree.api"
