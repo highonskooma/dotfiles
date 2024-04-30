@@ -109,6 +109,9 @@ alias bt="sudo systemctl start bluetooth && bluetuith"
 alias update="yay -Syu && sudo pacman -Syu"
 alias cat="bat"
 alias gs="git status"
+alias wallpaper="cd ~/Scripts && ./wallpaperRandomizer.sh"
+alias auto-commit="~/Scripts/auto-commit.sh"
+
 #
 fastfetch
 source /home/blackgaze/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

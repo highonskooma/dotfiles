@@ -191,13 +191,6 @@ bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
 # keybinding list in editor:
 # bindsym $mod+F1 exec --no-startup-id xed ~/.config/i3/keybindings
 
-# Backlight control
-#bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
-#bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
-# Backlight setting using dunst osc
-bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
-bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
-
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -282,9 +275,14 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 ## App shortcuts
 bindsym $mod+w exec --no-startup-id /usr/bin/firefox
 bindsym $mod+n exec --no-startup-id /usr/bin/thunar
-bindsym Print exec --no-startup-id scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Pictures/screenshots/$(date +"%Y-%m-%d-%T")-screenshot.png"
+# bindsym Print exec --no-startup-id scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Pictures/screenshots/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym Print exec --no-startup-id shutter -s
 bindsym $mod+o exec --no-startup-id /usr/bin/obsidian
 bindsym $mod+t exec --no-startup-id /usr/bin/thunar
+
+# Screen brightness shortcuts
+bindsym $Mod+F11 exec --no-startup-id ddcutil setvcp 10 - 20 && notify-send "Brightness - $(ddcutil getvcp 10 | grep -oP 'current value =\s*\K\d+')%"
+bindsym $Mod+F12 exec --no-startup-id ddcutil setvcp 10 + 20 && notify-send "Brightness - $(ddcutil getvcp 10 | grep -oP 'current value =\s*\K\d+')%"
 
 # Power Profiles menu switcher (rofi)
 # bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
