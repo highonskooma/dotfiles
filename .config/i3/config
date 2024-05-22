@@ -186,7 +186,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # keybinding in fancy rofi (automated):
-bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
+# bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
 # alternative
 # keybinding list in editor:
 # bindsym $mod+F1 exec --no-startup-id xed ~/.config/i3/keybindings
@@ -276,7 +276,8 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 bindsym $mod+w exec --no-startup-id /usr/bin/firefox
 bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 # bindsym Print exec --no-startup-id scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Pictures/screenshots/$(date +"%Y-%m-%d-%T")-screenshot.png"
-bindsym Print exec --no-startup-id shutter -s
+bindsym Control+Print exec --no-startup-id shutter -s
+bindsym Print exec --no-startup-id shutter -f 
 bindsym $mod+o exec --no-startup-id /usr/bin/obsidian
 bindsym $mod+t exec --no-startup-id /usr/bin/thunar
 
@@ -476,6 +477,7 @@ exec --no-startup-id /usr/bin/dunst
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+for_window [instance="steam"] floating enable 
 
 # set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
