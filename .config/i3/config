@@ -321,21 +321,22 @@ set $ws10 "10"
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
 # you can get from xrandr command
-#workspace $ws1 output VGA-0
-#workspace $ws2 output VGA-0
-#workspace $ws3 output HDMI-0
-#workspace $ws4 output HDMI-0
-workspace $ws5 output HDMI-A-1
+workspace $ws1 output DisplayPort-0
+workspace $ws2 output DisplayPort-0
+workspace $ws3 output DisplayPort-0
+workspace $ws4 output DisplayPort-1
+workspace $ws5 output DisplayPort-1
+workspace $ws6 output DisplayPort-1
 
 # fix vertical tearning for the current display
 exec --no-startup-id xrandr --output DisplayPort-1 --set TearFree on
 
 # bind program to workspace and focus to them on startup:
-assign [class="Xfce4-terminal"] $ws1
-assign [class="(?i)firefox"] $ws2
-assign [class="Thunar"] $ws3
+# assign [class="Xfce4-terminal"] $ws1
+assign [class="discord"] $ws2
 assign [class="obsidian"] $ws3
-assign [class="discord"] $ws4
+assign [class="(?i)firefox"] $ws4
+assign [class="Thunar"] $ws5
 assign [class="steam"] $ws5
 
 # automatic set focus new window if it opens on another workspace than the current:

@@ -11,4 +11,5 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
-polybar -q main -c "$DIR"/config.ini &
+MONITOR=$"DisplayPort-0" polybar -q main -c "$DIR"/config.ini &
+MONITOR=$"DisplayPort-1" polybar -q main -c "$DIR"/config.ini &
