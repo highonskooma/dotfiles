@@ -110,7 +110,9 @@ alias update="yay -Syu && sudo pacman -Syu"
 alias cat="bat"
 alias gs="git status"
 alias wallpaper="cd ~/Scripts && ./wallpaperRandomizer.sh"
+alias wall="cd ~/Scripts && ./hyprWallpaper.sh"
 alias auto-commit="~/Scripts/auto-commit.sh"
+alias ff="fastfetch"
 
 #
 fastfetch

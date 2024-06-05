@@ -49,7 +49,8 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 3
+	# SWAY
+# new_window pixel 3
 
 # thin borders
 # hide_edge_borders both
@@ -72,12 +73,12 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # switch to workspace
-bindcode $mod+10    workspace  $ws1
-bindcode $mod+11    workspace  $ws2
-bindcode $mod+12    workspace  $ws3
-bindcode $mod+13    workspace  $ws4
-bindcode $mod+14    workspace  $ws5
-bindcode $mod+15    workspace  $ws6
+bindcode Control+10    workspace  $ws1
+bindcode Control+11    workspace  $ws2
+bindcode Control+12    workspace  $ws3
+bindcode $mod+10    workspace  $ws4
+bindcode $mod+11    workspace  $ws5
+bindcode $mod+12    workspace  $ws6
 bindcode $mod+16    workspace  $ws7
 bindcode $mod+17    workspace  $ws8
 bindcode $mod+18    workspace  $ws9
@@ -193,9 +194,9 @@ bindsym $mod+Shift+r restart
 
 # change focus
 bindsym $mod+j focus left
-bindsym $mod+k focus down
-# bindsym $mod+b focus up
-# bindsym $mod+o focus right
+bindsym $mod+k focus right 
+bindsym $mod+b focus down 
+bindsym $mod+o focus up 
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -278,12 +279,12 @@ bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 # bindsym Print exec --no-startup-id scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Pictures/screenshots/$(date +"%Y-%m-%d-%T")-screenshot.png"
 bindsym Control+Print exec --no-startup-id shutter -s
 bindsym Print exec --no-startup-id shutter -f 
-bindsym $mod+o exec --no-startup-id /usr/bin/obsidian
+# bindsym $mod+o exec --no-startup-id /usr/bin/obsidian
 bindsym $mod+t exec --no-startup-id /usr/bin/thunar
 
 # Screen brightness shortcuts
-bindsym $Mod+F11 exec --no-startup-id ddcutil setvcp 10 - 20 && notify-send "Brightness - $(ddcutil getvcp 10 | grep -oP 'current value =\s*\K\d+')%"
-bindsym $Mod+F12 exec --no-startup-id ddcutil setvcp 10 + 20 && notify-send "Brightness - $(ddcutil getvcp 10 | grep -oP 'current value =\s*\K\d+')%"
+# bindsym $Mod+F11 exec --no-startup-id ddcutil setvcp 10 - 20 && notify-send "Brightness - $(ddcutil getvcp 10 | grep -oP 'current value =\s*\K\d+')%"
+# bindsym $Mod+F12 exec --no-startup-id ddcutil setvcp 10 + 20 && notify-send "Brightness - $(ddcutil getvcp 10 | grep -oP 'current value =\s*\K\d+')%"
 
 # Power Profiles menu switcher (rofi)
 # bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
@@ -527,7 +528,7 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 # bar settings (input comes from Polybar) #
 ############################################
 
-exec bash ~/dotfiles/.config/polybar/launch.sh --colorblocks
+exec bash ~/dotfiles/.config/polybar/colorblocks/launch.sh --colorblocks
 
 #####################################
 # Application menu handled by rofi: #
@@ -556,3 +557,5 @@ bindsym $mod+d exec --no-startup-id ~/dotfiles/.config/polybar/colorblocks/scrip
 # exec --no-startup-id greenclip daemon>/dev/null
 # bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
 #		-config ~/.config/rofi/rofidmenu.rasi
+
+exec --no-startup-id xrandr --output DisplayPort-0 --scale 1.2x1.2
