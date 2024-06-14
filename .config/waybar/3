@@ -160,22 +160,21 @@ window#waybar.hidden {
 	background-color: @background;
 	padding: 0 12px;
 	margin: 6px 0 0;
-	color: @color13;
 }
 
 #bluetooth {
 	border-radius: 8px 0px 0px 8px;
-	color: @color13;
+	color: @color12;
 	margin-left: 3px;
 	border-right: none;
 }
 
-/* #network { */
-/* 	color: @color13; */
-/* 	padding-right: 14px; */
-/* 	border-right: none; */
-/* 	border-left: none; */
-/* } */
+#network {
+	color: @color13;
+	padding-right: 14px;
+	border-right: none;
+	border-left: none;
+}
 
 #network.disconnected {
 	color: @color11;

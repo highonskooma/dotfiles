@@ -1,219 +1,218 @@
-// -*- mode: jsonc -*-
-{
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": [
-        "hyprland/workspaces",
-				"hyprland/window",
-        // "sway/scratchpad",
-        "custom/media",
-    ],
-    "modules-center": [
-        "clock"
-    ],
-    "modules-right": [
-				// "bluetooth",
-        // "idle_inhibitor",
-        "pulseaudio",
-        // "network",
-        // "power-profiles-daemon",
-        "cpu",
-        "temperature",
-        "memory",
-				"disk",
-        // "keyboard-state",
-        "tray",
-				"group/group-power"
-    ],
-    // Modules configuration
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-				"active-only": false,
-        "warp-on-scroll": false,
-        "format": "{icon}",
-        "format-icons": {
-            "1": "",
-            "2": "󰈹",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
-    },
-		"hyprland/window": {
-			"format": "{class}",
-			"rewrite": {
-				"(.*) — Mozilla Firefox": "🌎 $1",
-				"(.*) - fish": "> [$1]"
-			},
-			"separate-outputs": true
+[{
+	"output": "DP-1",
+	"height": 40, // Waybar height (to be removed for auto height)
+	"layer": "top", // Waybar at top layer
+	"modules-left": [
+		"custom/launcher",
+		"custom/playerctl"
+	],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": [
+		"tray",
+		"custom/theme",
+		"custom/wallpaper",
+		"bluetooth",
+		"network",
+		"pulseaudio",
+		"clock",
+		"custom/power-menu"
+	],
+	"hyprland/workspaces": {
+		"all-outputs": true,
+		"active-only": false,
+		"on-click": "activate",
+		"format": "{icon}",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"urgent": "",
+			"default": ""
 		},
-		"keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-		"disk": {
-				"format": "{free} ",
-				"tooltip": true,
-				"tooltip-format": "{percentage_free}% remaining on {path}"
+		"persistent-workspaces": {
+			"*": 7
+		}
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"clock": {
+		"interval": 60,
+		"align": 0,
+		"rotate": 0,
+		"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+		"format": "{:%d %b, %I:%M %p}",
+		"format-alt": "{:%a %b %d, %G}"
+	},
+	"bluetooth": {
+		"format": "",
+		"on-click": "blueberry"
+	},
+	"cpu": {
+		"interval": 10,
+		"format": "  {}%",
+		"max-length": 10,
+		"on-click": ""
+	},
+	"memory": {
+		"interval": 30,
+		"format": "  {}%",
+		"format-alt": " {used:0.1f}GB",
+		"max-length": 10
+	},
+	"backlight": {
+		"device": "DP-1",
+		"format": "{icon}",
+		"tooltip-format": "{percent}",
+		"format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+		"on-scroll-up": "~/.config/waybar/scripts/brightness.sh --inc",
+		"on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec"
+	},
+	"network": {
+		"format-wifi": "{icon}",
+		"format-ethernet": "󰈁",
+		"format-disconnected": "󰖪",
+		"tooltip-format": "{essid}",
+		"on-click": "kitty nmtui",
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+	},
+	"pulseaudio": {
+		"format": "{icon}",
+		"format-muted": "婢",
+		"format-icons": {
+			"default": ["", "", "󰕾"]
 		},
-		"group/group-power": {
-			"orientation": "inherit",
-			"drawer": {
-				"transition-duration": 500,
-				"children-class": "not-power",
-				"transition-left-to-right": false,
-			},
-			"modules": [
-				"custom/power", // First element is the "group leader" and won't ever be hidden
-				"custom/quit",
-				"custom/lock",
-				"custom/reboot",
-			]
+		"on-click": "pavucontrol &",
+		"on-click-right": "pamixer -t",
+		"scroll-step": 5,
+		"on-scroll-up": "~/.config/waybar/scripts/volume.sh --inc",
+		"on-scroll-down": "~/.config/waybar/scripts/volume.sh --dec",
+		"tooltip": true,
+		"tooltip-format": "{volume}%"
+	},
+	"battery": {
+		"interval": 60,
+		"align": 0,
+		"rotate": 0,
+		"full-at": 100,
+		"design-capacity": false,
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
 		},
-		"custom/quit": {
-			"format": "󰗼",
-			"tooltip": false,
-			"on-click": "hyprctl dispatch exit"
-		},
-		"custom/lock": {
-			"format": "󰍁",
-			"tooltip": false,
-			"on-click": "swaylock"
-		},
-		"custom/reboot": {
-			"format": "󰜉",
-			"tooltip": false,
-			"on-click": "reboot"
-		},
-		"custom/power": {
-			"format": "",
-			"tooltip": false,
-			"on-click": "shutdown now"
-		},
-		"bluetooth": {
-	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-	"format": " {status}",
-	"format-disabled": "", // an empty format will hide the module
-	"format-connected": " {device_alias}",
-	"tooltip-format": "{controller_alias}\t{controller_address}",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-		},
-		"idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
-    "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/resources/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+		"format": "{icon}  {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-plugged": "  {capacity}%",
+		"format-full": "{icon}  Full",
+		"format-alt": "{icon}  {time}",
+		"format-icons": ["", "", "", "", ""],
+		"format-time": "{H}h {M}min",
+		"tooltip": true
+	},
+	"custom/playerctl": {
+		"escape": "true",
+		"exec": "~/Scripts/music_panel.sh",
+		// "exec-if": "~/Scripts/playerctl-status.sh",
+		// "interval": 1,
+		"format": "{}",
+		"max-length": 40,
+		"on-click": "playerctl play-pause"
+	},
+	"custom/weather": {
+		"exec": "python3 ~/.config/waybar/scripts/weather.py",
+		"restart-interval": 300,
+		"return-type": "json"
+	},
+	"custom/spotify": {
+		"exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+		"format": "  {}",
+		"return-type": "json",
+		"on-click": "playerctl play-pause",
+		"on-scroll-up": "playerctl next",
+		"on-scroll-down": "playerctl previous"
+	},
+	"custom/power-menu": {
+		"format": " ⏻ ",
+		"on-click": "~/.config/rofi/scripts/powermenu"
+	},
+	"custom/launcher": {
+		"format": "󰊠",
+		"on-click": "~/.config/rofi/scripts/launcher"
+	},
+	"custom/wallpaper": {
+		"format": "",
+		"on-click": "~/.config/rofi/scripts/wallpaper",
+		"on-click-right": "~/.config/waybar/scripts/wallpaper.sh"
+	},
+	"custom/theme": {
+		"format": "",
+		"on-click": "~/.config/waybar/scripts/theme.sh"
+	}
+}, {
+"output": "DP-2",
+"layer": "top", // Waybar at top layer
+"modules-left": [
+	"cpu#load", 
+	"cpu#usage", 
+	"cpu#frequency", 
+	"custom/gpuusage",
+	"memory", 
+	"disk", 
+	"temperature", 
+	"custom/gputemp",
+	"network"
+],
+"modules-right": [
+	"clock",
+],
+"cpu#load": {
+	"interval": 5,
+	"format": "  LOAD: {load}%",
+	"on-click": ""
+},
+"cpu#usage": {
+	"interval": 5,
+	"format": "  USAGE: {usage}%",
+},
+"cpu#frequency": {
+	"interval": 5,
+	"format": "  FREQ: {avg_frequency}GHz",
+},
+"custom/gpuusage": {
+	"exec": "cat /sys/class/hwmon/hwmon4/device/gpu_busy_percent",
+	"format": "  GPU: {}%",
+	"return-type": "",
+	"interval": 5
+},
+"memory": {
+	"interval": 5,
+	"format": "  {used} / {total} ({}%)",
+	"format-alt": " {used:0.1f}GB",
+},
+"disk": {
+	"interval": 30,
+	"format": "  {used} / {total} ({percentage_used}%)",
+	"path": "/"
+},
+"temperature": {
+	"hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input",
+	"format": " CPU: {}°C",
+	"interval": 1
+},
+"custom/gputemp": {
+	"exec": "sh -c 'temp=$(cat /sys/class/hwmon/hwmon4/temp1_input); printf \"%.0f\" $(($temp/1000))'",
+	"format": " GPU: {}°C",
+	"interval": 10
+},
+"network": {
+	// "interface": "eth0",
+	"format-wifi": "  {signalStrength} {bandwidthUpBytes} {bandwidthDownBytes} ",
+	"format-ethernet": "  {bandwidthUpBytes} {bandwidthDownBytes}",
+	"interval": 1,
 }
+}]
