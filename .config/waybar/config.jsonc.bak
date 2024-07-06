@@ -185,7 +185,10 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+				"scroll-step": 1,
+				"on-scroll-up": "notify-send 'Volume up'",
+				"on-scroll-down": "notify-send 'Volume down'"
     },
     "custom/media": {
         "format": "{icon} {}",
