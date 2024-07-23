@@ -1126,7 +1126,7 @@
 
 #: The foreground and background colors.
 
-background_opacity 0.7
+# background_opacity 0.7
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -1150,7 +1150,7 @@ background_opacity 0.7
 #: this option when reloading the config will only work if
 #: dynamic_background_opacity was enabled in the original config.
 
-background_blur 50
+# background_blur 50
 
 #: Set to a positive value to enable background blur (blurring of the
 #: visuals behind a transparent window) on platforms that support it.
