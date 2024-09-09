@@ -156,7 +156,7 @@ window#waybar.hidden {
 #backlight,
 #pulseaudio,
 #network {
-	border-radius: 0px;
+	border-radius: 8px;
 	background-color: @background;
 	padding: 0 12px;
 	margin: 6px 0 0;

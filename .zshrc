@@ -113,6 +113,8 @@ alias wallpaper="cd ~/Scripts && ./wallpaperRandomizer.sh"
 alias wall="cd ~/Scripts && ./hyprWallpaper.sh"
 alias auto-commit="~/Scripts/auto-commit.sh"
 alias ff="fastfetch"
+alias logoff="hyprctl dispatch exit"
+alias prism="./Downloads/PrismLauncher-Linux-x86_64.AppImage"
 
 #
 fastfetch

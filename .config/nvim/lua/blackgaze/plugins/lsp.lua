@@ -55,7 +55,18 @@ return {
       opts.desc = "Show documentation for what is under cursor"
       keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
-      opts.desc = "Restart LSP"
+      opts.desc = "Restart LSP"    -- configure rust server
+    lspconfig["rust_analyzer"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = {
+        ["rust-analyzer"] = {
+          checkOnSave = {
+            command = "clippy"
+          },
+        },
+      },
+    })
       keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
     end
 
@@ -74,6 +85,19 @@ return {
     lspconfig["html"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+    })
+
+    -- configure rust server
+    lspconfig["rust_analyzer"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = {
+        ["rust-analyzer"] = {
+          checkOnSave = {
+            command = "clippy"
+          },
+        },
+      },
     })
 
     -- configure typescript server with plugin

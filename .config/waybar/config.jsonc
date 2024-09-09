@@ -3,16 +3,16 @@
 	"height": 40, // Waybar height (to be removed for auto height)
 	"layer": "top", // Waybar at top layer
 	"modules-left": [
-		"custom/launcher",
+		// "custom/launcher",
 		"custom/playerctl"
 	],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": [
 		"tray",
-		"custom/theme",
-		"custom/wallpaper",
+		// "custom/theme",
+		// "custom/wallpaper",
 		"bluetooth",
-		"network",
+		// "network",
 		"pulseaudio",
 		"clock",
 		"custom/power-menu"
@@ -27,9 +27,10 @@
 		"format-icons": {
 			"1": "",
 			"2": "",
-			"3": "",
-			"4": "",
-			"5": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"6": "",
 			"urgent": "",
 			"default": ""
 		},
@@ -141,8 +142,8 @@
 		"on-click": "~/.config/rofi/scripts/powermenu"
 	},
 	"custom/launcher": {
-		"format": "󰊠",
-		"on-click": "~/.config/rofi/scripts/launcher"
+		"format": "󰣇",
+		"on-click": "~/.config/rofi/scripts/launcher_t2"
 	},
 	"custom/wallpaper": {
 		"format": "",
@@ -214,5 +215,13 @@
 	"format-wifi": "  {signalStrength} {bandwidthUpBytes} {bandwidthDownBytes} ",
 	"format-ethernet": "  {bandwidthUpBytes} {bandwidthDownBytes}",
 	"interval": 1,
+},
+"clock": {
+	"interval": 60,
+	"align": 0,
+	"rotate": 0,
+	"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+	"format": "{:%d %b, %I:%M %p}",
+	"format-alt": "{:%a %b %d, %G}"
 }
 }]

@@ -7,8 +7,8 @@ local colorschemes = {
 	['pywal'] = 'AlphaTechnolog/pywal.nvim'
 }
 
-local selectedColorscheme = 'pywal' --change here
-local style = ''
+local selectedColorscheme = 'tokyonight' --change here
+local style = '-night'
 
 return {
 	colorschemes[selectedColorscheme],
