@@ -4,7 +4,7 @@ return {
 	config = function()
 		require('dashboard').setup {
 			theme = 'hyper',
-			-- shortcut_type = 'number',
+			shortcut_type = 'number',
 			config = {
 
 				--  enable = true,
