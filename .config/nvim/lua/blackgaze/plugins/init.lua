@@ -10,4 +10,5 @@ return {
 	'ellisonleao/gruvbox.nvim',
 	"nvim-lua/plenary.nvim",
 	"theRealCarneiro/hyprland-vim-syntax",
+	"echasnovski/mini.icons",
 }

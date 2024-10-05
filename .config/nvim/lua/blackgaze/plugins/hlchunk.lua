@@ -23,7 +23,7 @@ return {
 			},
 			blank = {
         enable = false,
-    	},
+			},
 			line_num = {
         enable = true,
         use_treesitter = false,
