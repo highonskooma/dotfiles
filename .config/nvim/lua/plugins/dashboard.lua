@@ -8,8 +8,6 @@ return {
 			shortcut_type = "number",
 			config = {
 
-				--  enable = true,
-				-- },
 				header = {
 					[[          ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ]],
 					[[           ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ]],
@@ -44,7 +42,7 @@ return {
 					{
 						desc = " Tree",
 						group = "DiagnosticHint",
-						action = "Neotree",
+						action = "Neotree position=current",
 						key = "t",
 					},
 					{

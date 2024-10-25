@@ -192,3 +192,6 @@ map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
 -- NeoTree
 map("n", "<F3>", "<cmd>Neotree toggle<cr>", { desc = "Toggle Tree" })
+
+-- Dashboard
+map("n", "<leader>hh", "<cmd>Dashboard<cr>", { desc = "Go To Dashboard" })

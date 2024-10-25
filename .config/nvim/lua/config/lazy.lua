@@ -16,11 +16,14 @@ require("lazy").setup({
 		-- add LazyVim and import plugins
 		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
 		-- import any extras modules here
-		-- { import = "lazyvim.plugins.extras.test.core" },
+		--
 		-- -- import your plugins
-		{ import = "blackgaze.plugins" },
+		{ import = "plugins" },
 	},
 	install = { colorscheme = { "habamax", "gruvbox", "tokyonight" } },
+	opts = {
+		colorscheme = "gruvbox",
+	},
 	checker = {
 		enabled = true, -- check for plugin updates periodically
 		notify = false, -- notify on update

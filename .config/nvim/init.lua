@@ -1,1 +1,1 @@
-require("blackgaze.lazy")
+require("config.lazy")

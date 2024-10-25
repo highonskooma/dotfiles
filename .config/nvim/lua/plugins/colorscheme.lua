@@ -28,7 +28,7 @@ local style = "-night"
 
 return {
 	colorschemes[selectedColorscheme],
-	enabled = true,
+	enabled = false,
 	lazy = false,
 	priority = 1000,
 	config = function()
