@@ -1,12 +1,12 @@
 return {
 	"willothy/nvim-cokeline",
+	enabled = false,
 	dependencies = {
-		"nvim-lua/plenary.nvim",        -- Required for v0.4.0+
+		"nvim-lua/plenary.nvim", -- Required for v0.4.0+
 		"nvim-tree/nvim-web-devicons", -- If you want devicons
-		"stevearc/resession.nvim"       -- Optional, for persistent history
+		"stevearc/resession.nvim", -- Optional, for persistent history
 	},
 	config = function()
-
 		-- vim.keymap.set("n", "<leader>e", function()
 		-- 	require('cokeline.mappings').pick("focus")
 		-- end, { desc = "Pick a buffer to focus" })
@@ -20,8 +20,7 @@ return {
 		-- map("n", "<Leader>p", "<Plug>(cokeline-switch-prev)", { silent = true })
 		-- map("n", "<Leader>n", "<Plug>(cokeline-switch-next)", { silent = true })
 
-
-		require('cokeline').setup({
+		require("cokeline").setup({
 			-- Only show the bufferline when there are at least this many visible buffers.
 			-- default: `1`.
 			---@type integer
@@ -46,7 +45,7 @@ return {
 				-- buffer to the left of the deleted one while `next` focuses the one the
 				-- right.
 				-- default: 'next'.
-				focus_on_delete = 'prev',
+				focus_on_delete = "prev",
 
 				-- If set to `last` new buffers are added to the end of the bufferline,
 				-- if `next` they are added next to the current buffer.
@@ -54,7 +53,7 @@ return {
 				-- if set to `number` buffers are sorted by bufnr, as in default Neovim
 				-- default: 'last'.
 				---@type 'last' | 'next' | 'directory' | 'number' | fun(a: Buffer, b: Buffer):boolean
-				new_buffers_position = 'last',
+				new_buffers_position = "last",
 
 				-- If true, right clicking a buffer will close it
 				-- The close button will still work normally
@@ -83,7 +82,7 @@ return {
 				enabled = true,
 				---The number of buffers to save in the history
 				---@type integer
-				size = 2
+				size = 2,
 			},
 
 			rendering = {
@@ -107,7 +106,7 @@ return {
 				-- non-QWERTY keyboard layouts.
 				-- default: `'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERTYQP'`
 				---@type string
-				letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERTYQP',
+				letters = "asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERTYQP",
 			},
 
 			-- The default highlight group values.
@@ -152,7 +151,7 @@ return {
 			},
 
 			-- The highlight group used to fill the tabline space
-			fill_hl = 'TabLineFill',
+			fill_hl = "TabLineFill",
 
 			-- A list of components to be rendered for each buffer. Check out the section
 			-- below explaining what this value can be set to.
@@ -173,7 +172,7 @@ return {
 			tabs = {
 				placement = "right",
 				---@type Component[]
-				components = {}
+				components = {},
 			},
 
 			-- Left sidebar to integrate nicely with file explorer plugins.

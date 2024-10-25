@@ -202,17 +202,5 @@ return {
       end,
     })
 
-    -- configure go server
-    lspconfig["gopls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- configure c++ server
-    lspconfig["clangd"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
   end,
 }
