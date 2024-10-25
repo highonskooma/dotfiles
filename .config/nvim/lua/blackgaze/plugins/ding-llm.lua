@@ -3,14 +3,22 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       local system_prompt =
-        'You should replace the code that you are sent, only following the comments. Do not talk at all. Only output valid code. Do not provide any backticks that surround the code. Never ever output backticks like this ```. Any comment that is asking you for something should be removed after you satisfy them. Other comments should left alone. Do not output backticks'
+        'You should replace the code that you are sent, only following the comments. Do not talk at all. Only output ' ..
+        'valid code. Do not provide any backticks that surround the code. Never ever output backticks like this ```. ' ..
+        'Any comment that is asking you for something should be removed after you satisfy them. Other comments should ' ..
+        'left alone. Do not output backticks'
       local helpful_prompt = 'You are a helpful assistant. What I have sent are my notes so far.'
+      local direct_prompt = 'You are a helpful assistant. What I have sent are my notes so far. Try to use ' ..
+        'abbreviations like smt for something and abt for about, and be concise. Your message should be short.' ..
+        'You can use slang, but do not use emojis or emoticons.' ..
+        'Use swears once in a while, but do not use them excessively.'
       local dingllm = require 'dingllm'
+      local ollama_model = 'codellama:13b'
 
       local function make_ollama_spec_curl_args(opts, prompt)
           local url = opts.url
           local data = {
-              model = "dolphin-llama3:latest",
+              model = ollama_model,
               messages = { { role = 'system', content = system_prompt }, { role = 'user', content = prompt } },
               stream = true,
           }
@@ -22,7 +30,7 @@ return {
       local function ollama_replace()
         dingllm.invoke_llm_and_stream_into_editor({
           url = 'http://localhost:11434/api/chat',
-          model = 'llama3.1:8b',
+          model = ollama_model,
           system = system_prompt,
         }, make_ollama_spec_curl_args, dingllm.handle_ollama_spec_data)
       end
@@ -30,7 +38,7 @@ return {
       local function ollama_help()
           dingllm.invoke_llm_and_stream_into_editor({
               url = 'http://localhost:11434/api/chat',
-              model = 'llama3.1:8b',
+              model = ollama_model,
               system = helpful_prompt,
           }, make_ollama_spec_curl_args, dingllm.handle_ollama_spec_data)
       end
@@ -75,7 +83,7 @@ return {
         }, dingllm.make_anthropic_spec_curl_args, dingllm.handle_anthropic_spec_data)
       end
 
-		  vim.keymap.set({ 'n', 'v' }, '<leader>z', ollama_replace, { desc = 'ollama base' }) -- explain the codevim.keymap.set
+		  vim.keymap.set({ 'n', 'v' }, '<leader>z', ollama_replace, { desc = 'ollama base' }) 
 			vim.keymap.set({ 'n', 'v' }, '<leader>T', ollama_help, { desc = 'ollama help' })
       vim.keymap.set({ 'n', 'v' }, '<leader>k', groq_replace, { desc = 'llm groq' })
       vim.keymap.set({ 'n', 'v' }, '<leader>K', groq_help, { desc = 'llm groq_help' })
