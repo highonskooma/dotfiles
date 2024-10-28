@@ -10,7 +10,7 @@
 	"modules-right": [
 		"tray",
 		// "custom/theme",
-		// "custom/wallpaper",
+		"custom/wallpaper",
 		"bluetooth",
 		// "network",
 		"pulseaudio",
@@ -147,8 +147,7 @@
 	},
 	"custom/wallpaper": {
 		"format": "",
-		"on-click": "~/.config/rofi/scripts/wallpaper",
-		"on-click-right": "~/.config/waybar/scripts/wallpaper.sh"
+		"on-click": "~/Repos/wallpaper-selector/wofi-wallpaper-selector.sh",
 	},
 	"custom/theme": {
 		"format": "",
@@ -185,15 +184,14 @@
 	"format": "  FREQ: {avg_frequency}GHz",
 },
 "custom/gpuusage": {
-	"exec": "cat /sys/class/hwmon/hwmon4/device/gpu_busy_percent",
+	"exec": "cat /sys/class/hwmon/hwmon6/device/gpu_busy_percent",
 	"format": "  GPU: {}%",
 	"return-type": "",
 	"interval": 5
 },
 "memory": {
-	"interval": 5,
-	"format": "  {used} / {total} ({}%)",
-	"format-alt": " {used:0.1f}GB",
+    "interval": 30,
+    "format": "  {used:0.1f}G / {total:0.1f}G"
 },
 "disk": {
 	"interval": 30,

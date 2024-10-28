@@ -7,7 +7,6 @@ return {
 			theme = "hyper",
 			shortcut_type = "number",
 			config = {
-
 				header = {
 					[[          ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ]],
 					[[           ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ]],
@@ -54,6 +53,7 @@ return {
 				},
 			},
 		})
+		require("lualine")
 	end,
 	dependencies = { { "nvim-tree/nvim-web-devicons" } },
 }

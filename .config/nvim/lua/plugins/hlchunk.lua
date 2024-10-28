@@ -1,6 +1,6 @@
 return {
 	"shellRaining/hlchunk.nvim",
-	enabled = false,
+	enabled = true,
 	event = { "UIEnter" },
 	config = function()
 		require("hlchunk").setup({
@@ -20,7 +20,7 @@ return {
 				},
 			},
 			indent = {
-				enable = false,
+				enable = true,
 			},
 			blank = {
 				enable = false,
