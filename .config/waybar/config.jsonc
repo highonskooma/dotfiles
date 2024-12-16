@@ -204,9 +204,9 @@
 	"interval": 1
 },
 "custom/gputemp": {
-	"exec": "sh -c 'temp=$(cat /sys/class/hwmon/hwmon4/temp1_input); printf \"%.0f\" $(($temp/1000))'",
+	"exec": "sh -c 'temp=$(cat /sys/class/hwmon/hwmon6/temp1_input); printf \"%.0f\" $(($temp/1000))'",
 	"format": " GPU: {}°C",
-	"interval": 10
+	"interval": 1
 },
 "network": {
 	// "interface": "eth0",
