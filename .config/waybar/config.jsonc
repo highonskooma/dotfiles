@@ -14,8 +14,8 @@
 		"bluetooth",
 		// "network",
 		"pulseaudio",
-		"clock",
-		"custom/power-menu"
+		"clock"
+		// "custom/power-menu"
 	],
 	"hyprland/workspaces": {
 		"all-outputs": true,
@@ -154,7 +154,7 @@
 		"on-click": "~/.config/waybar/scripts/theme.sh"
 	}
 }, {
-"output": "DP-2",
+"output": "HDMI-A-2",
 "layer": "top", // Waybar at top layer
 "modules-left": [
 	"cpu#load", 
@@ -199,12 +199,13 @@
 	"path": "/"
 },
 "temperature": {
-	"hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input",
+	"hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:18.3/hwmon",
+  "input-filename": "temp1_input",
 	"format": " CPU: {}°C",
 	"interval": 1
 },
 "custom/gputemp": {
-	"exec": "sh -c 'temp=$(cat /sys/class/hwmon/hwmon6/temp1_input); printf \"%.0f\" $(($temp/1000))'",
+	"exec": "sh -c 'temp=$(cat /sys/class/hwmon/hwmon7/temp1_input); printf \"%.0f\" $(($temp/1000))'",
 	"format": " GPU: {}°C",
 	"interval": 1
 },

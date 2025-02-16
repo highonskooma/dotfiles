@@ -4,7 +4,8 @@ return {
 		enabled = true,
 		event = { "bufreadpre", "bufnewfile" },
 		build = ":TSUpdate",
-		version = "0.9.1",
+		-- version = "0.9.1",
+		branch = "master",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"windwp/nvim-ts-autotag",
