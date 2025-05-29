@@ -1,14 +1,32 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "modules": [
-        "title",
-        "separator",
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "auto",        // Logo type: auto, builtin, small, file, etc.
+    "source": "/home/blackgaze/Pictures/ornstein.png",      // Built-in logo name or file path
+    "width": 35,           // Width in characters (for image logos)
+    "height": 25,          // Height in characters (for image logos)
+    "padding": {
+      "top": 0,          // Top padding
+      "left": 0,         // Left padding
+      "right": 2         // Right padding
+    },
+    "color": {             // Override logo colors
+      "1": "blue",
+      "2": "green"
+    }
+  },
+  "modules": [
+        // "title",
+        // "separator",
+        "break",
         "os",
         "host",
         // "bios",
         // "board",
+        "bluetooth",
         // "chassis",
         "kernel",
+        "keyboard",
         "uptime",
         // "processes",
         // "packages",
@@ -22,10 +40,10 @@
         // "wmtheme",
         // "theme",
         // "icons",
-        "font",
         // "cursor",
-        "wallpaper",
+        // "wallpaper",
         "terminal",
+        "TerminalFont",
         // "terminalfont",
         // "terminalsize",
         // "terminaltheme",
@@ -38,7 +56,6 @@
         // "battery",
         // "poweradapter",
         // "player",
-        "media",
         // "publicip",
         // "localip",
         // "wifi",
@@ -50,7 +67,19 @@
         "users",
         // "bluetooth",
         "sound",
-        // "camera",
+        "media",
+        "player",
+        "camera",
+        {
+          "type": "custom",
+          "key": "Mouse",
+          "format": "Logitech MX Vertical"
+        },
+        {
+          "type": "custom",
+          "key": "Keyboard",
+          "format": "Keychron V10 Max"
+        },
         "gamepad",
         // "weather",
         // "netio",
@@ -59,5 +88,5 @@
         // "version",
         "break",
         "colors"
-    ]
+  ]
 }
