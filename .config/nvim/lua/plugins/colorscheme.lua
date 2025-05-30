@@ -23,12 +23,12 @@ local colorschemes = {
 	["habamax"] = "habamax/vim-habamax",
 }
 
-local selectedColorscheme = "habamax" --change here
+local selectedColorscheme = "nightfly" --change here
 local style = "-night"
 
 return {
 	colorschemes[selectedColorscheme],
-	enabled = false,
+	enabled = true,
 	lazy = false,
 	priority = 1000,
 	config = function()
