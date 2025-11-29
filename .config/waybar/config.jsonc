@@ -157,14 +157,16 @@
 "output": "HDMI-A-2",
 "layer": "top", // Waybar at top layer
 "modules-left": [
-	"cpu#load", 
-	"cpu#usage", 
-	"cpu#frequency", 
+	"cpu#load",
+	"cpu#usage",
+	"cpu#frequency",
 	"custom/gpuusage",
-	"memory", 
-	"disk", 
-	"temperature", 
-	"custom/gputemp",
+	"memory",
+	"disk#main",
+  "disk#wdc",
+  "disk#hgst",
+  "temperature#cpu",
+  "temperature#gpu",
 	"network"
 ],
 "modules-right": [
@@ -193,16 +195,32 @@
     "interval": 30,
     "format": "  {used:0.1f}G / {total:0.1f}G"
 },
-"disk": {
+"disk#main": {
 	"interval": 30,
 	"format": "  {used} / {total} ({percentage_used}%)",
 	"path": "/"
 },
-"temperature": {
+"disk#wdc": {
+	"interval": 30,
+	"format": "  {used} / {total} ({percentage_used}%)",
+	"path": "/media/WDC/"
+},
+"disk#hgst": {
+	"interval": 30,
+	"format": "  {used} / {total} ({percentage_used}%)",
+	"path": "/media/HGST/"
+},
+"temperature#cpu": {
 	"hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:18.3/hwmon",
   "input-filename": "temp1_input",
 	"format": " CPU: {}°C",
 	"interval": 1
+},
+"temperature#gpu": {
+  "hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:01.1/0000:01:00.0/0000:02:00.0/0000:03:00.0/hwmon",
+  "input-filename": "temp1_input",
+  "format": " GPU: {}°C",
+  "interval": 1
 },
 "custom/gputemp": {
 	"exec": "sh -c 'temp=$(cat /sys/class/hwmon/hwmon7/temp1_input); printf \"%.0f\" $(($temp/1000))'",
@@ -210,7 +228,6 @@
 	"interval": 1
 },
 "network": {
-	// "interface": "eth0",
 	"format-wifi": "  {signalStrength} {bandwidthUpBytes} {bandwidthDownBytes} ",
 	"format-ethernet": "  {bandwidthUpBytes} {bandwidthDownBytes}",
 	"interval": 1,

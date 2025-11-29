@@ -1,0 +1,56 @@
+{
+  "editor.fontFamily": "'Iosevka Nerd Font Mono', 'JetBrains Mono', monospace",
+  "editor.fontSize": 15,
+  "editor.fontLigatures": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false,
+    "c": false
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorTheme": "Ayu Mirage Bordered",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "workbench.productIconTheme": "developer-icons",
+  "haskell.manageHLS": "GHCup",
+  "git.autofetch": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "vim.leader": "<space>",
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+    "<C-p>": false,
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["H"],
+      "commands": [":tabp"]
+    },
+    {
+      "before": ["L"],
+      "commands": [":tabn"]
+    },
+    {
+      "before": ["<space>", "w"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"],
+      "after": ["g", "v"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"],
+      "after": ["g", "v"]
+    }
+  ],
+  "diffEditor.ignoreTrimWhitespace": false
+}

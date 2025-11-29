@@ -82,11 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -106,18 +106,25 @@ alias lt="eza -aT --color=always --group-directories-first --icons"
 alias bt="sudo systemctl start bluetooth && bluetuith"
 
 #other aliases
+alias f="fastfetch"
+alias c="clear"
 alias update="yay -Syu && sudo pacman -Syu"
-alias cat="bat"
+# alias cat="bat"
 alias gs="git status"
 alias wallpaper="cd ~/Scripts && ./wallpaperRandomizer.sh"
 alias wall="cd ~/Scripts && ./hyprWallpaper.sh"
+alias picker="cd ~/Repos/wallpaper-selector && ./wofi-wallpaper-selector.sh"
 alias auto-commit="~/Scripts/auto-commit.sh"
 alias ff="fastfetch"
 alias logoff="hyprctl dispatch exit"
 alias prism="./Downloads/PrismLauncher-Linux-x86_64.AppImage"
+alias sus="cd ~/Scripts && ./suspend.sh"
+alias zen="/usr/bin/zen-browser"
+alias emudeck="curl -L https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh | bash"
+alias shadps4="/usr/bin/shadps4"
 
-#
 fastfetch
+
 source /home/blackgaze/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/nvm/init-nvm.sh
 
@@ -147,3 +154,18 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# ionic karma test / brave CHROME_BIN
+export CHROME_BIN=/usr/bin/chromium
+export CHROMIUM_BIN=/usr/bin/chromium
+
+# ionic capacitor 
+export CAPACITOR_ANDROID_STUDIO_PATH="/sbin/android-studio"
+
+# android 
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
