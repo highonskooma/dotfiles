@@ -15,7 +15,7 @@ return {
   opts = {
     -- add any opts here
     -- for example
-    provider = "copilot",
+    -- provider = "copilot",
     -- mappings = {
     --   ask = "<leader>ua",
     --   edit = "<leader>ue",
@@ -32,7 +32,7 @@ return {
     "stevearc/dressing.nvim", -- for input provider dressing
     "folke/snacks.nvim", -- for input provider snacks
     "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-    "zbirenbaum/copilot.lua", -- for providers='copilot'
+    --- "zbirenbaum/copilot.lua", -- for providers='copilot'
     {
       -- support for image pasting
       "HakonHarnes/img-clip.nvim",

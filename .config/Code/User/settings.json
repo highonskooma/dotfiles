@@ -4,6 +4,7 @@
   "editor.fontLigatures": true,
   "editor.inlineSuggest.enabled": true,
   "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.formatOnSave": true,
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
@@ -28,28 +29,55 @@
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["H"],
-      "commands": [":tabp"]
+      "before": [
+        "H"
+      ],
+      "commands": [
+        ":tabp"
+      ]
     },
     {
-      "before": ["L"],
-      "commands": [":tabn"]
+      "before": [
+        "L"
+      ],
+      "commands": [
+        ":tabn"
+      ]
     },
     {
-      "before": ["<space>", "w"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "<space>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"],
-      "after": ["g", "v"]
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ],
+      "after": [
+        "g",
+        "v"
+      ]
     },
     {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"],
-      "after": ["g", "v"]
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ],
+      "after": [
+        "g",
+        "v"
+      ]
     }
   ],
   "diffEditor.ignoreTrimWhitespace": false

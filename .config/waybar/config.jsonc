@@ -12,6 +12,7 @@
 		// "custom/theme",
 		"custom/wallpaper",
 		"bluetooth",
+    "custom/wifi",
 		// "network",
 		"pulseaudio",
 		"clock"
@@ -53,6 +54,10 @@
 		"format": "",
 		"on-click": "blueberry"
 	},
+  "custom/wifi": {
+		"format": " ",
+		"on-click": "wifi-manager --toggle"
+  },
 	"cpu": {
 		"interval": 10,
 		"format": "  {}%",
@@ -156,7 +161,7 @@
 }, {
 "output": "HDMI-A-2",
 "layer": "top", // Waybar at top layer
-"modules-left": [
+"modules-right": [
 	"cpu#load",
 	"cpu#usage",
 	"cpu#frequency",
@@ -169,7 +174,7 @@
   "temperature#gpu",
 	"network"
 ],
-"modules-right": [
+"modules-left": [
 	"clock",
 ],
 "cpu#load": {

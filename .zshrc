@@ -169,3 +169,10 @@ export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# No client side decorations for GTK
+export GTK_CSD=0
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
