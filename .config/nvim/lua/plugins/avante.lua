@@ -1,5 +1,6 @@
 return {
   "yetone/avante.nvim",
+  enabled = false,
   event = "VeryLazy",
   build = function()
     -- conditionally use the correct build system for the current OS
