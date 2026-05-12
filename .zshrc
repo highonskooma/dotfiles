@@ -147,6 +147,9 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# default screenshots dir
+export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
+
 # pnpm
 export PNPM_HOME="/home/blackgaze/.local/share/pnpm"
 case ":$PATH:" in

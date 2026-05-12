@@ -1,0 +1,22 @@
+local vars = require("config.vars")
+
+hl.on("hyprland.start", function()
+	hl.exec_cmd("awww-daemon")
+	hl.exec_cmd("wifi-manager")
+	hl.exec_cmd(
+		"QT_QPA_PLATFORM=xcb /home/blackgaze/Programs/openRGB/OpenRGB_1.0rc1_x86_64_1fbacde.AppImage --startminimized"
+	)
+	hl.exec_cmd("waybar")
+	hl.exec_cmd(vars.discord)
+	hl.exec_cmd("brave-browser-beta --disable-features=WaylandWpColorManagerV1")
+	hl.exec_cmd("kitty --title 'btop' btop")
+	hl.exec_cmd("sleep 5 && /home/blackgaze/Scripts/hyprWallpaper.sh")
+	hl.exec_cmd("kwallet6")
+	hl.exec_cmd("hypridle")
+	hl.exec_cmd("swaync && swaync-client -rs")
+	hl.exec_cmd("hyperhdr")
+	hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
+	hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=hyprland")
+	hl.exec_cmd("clipse -listen")
+end)

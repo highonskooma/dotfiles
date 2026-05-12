@@ -1,3 +1,4 @@
 .obsidian/
 .stow-local-ignore
 .zshrc
+.config/waybar/colors-waybar.css
