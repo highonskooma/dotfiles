@@ -123,10 +123,10 @@ alias zen="/usr/bin/zen-browser"
 alias emudeck="curl -L https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh | bash"
 alias shadps4="/usr/bin/shadps4"
 
-fastfetch
+# fastfetch
 
 source /home/blackgaze/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 #determines search program for fzf
 if type ag &> /dev/null; then
@@ -148,34 +148,39 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # default screenshots dir
-export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
+# export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 
 # pnpm
-export PNPM_HOME="/home/blackgaze/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# export PNPM_HOME="/home/blackgaze/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
 # pnpm end
 
 # ionic karma test / brave CHROME_BIN
-export CHROME_BIN=/usr/bin/chromium
-export CHROMIUM_BIN=/usr/bin/chromium
+# export CHROME_BIN=/usr/bin/chromium
+# export CHROMIUM_BIN=/usr/bin/chromium
 
 # ionic capacitor 
 export CAPACITOR_ANDROID_STUDIO_PATH="/sbin/android-studio"
 
 # android 
-export ANDROID_HOME="$HOME/Android/Sdk"
-export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
-export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+# export ANDROID_HOME="$HOME/Android/Sdk"
+# export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+# export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# source <(ng completion script)
 
 # No client side decorations for GTK
 export GTK_CSD=0
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init - zsh)"
+
+# TONE3000 plugin
+export PATH="$HOME/.local/bin:$PATH"   
+
+

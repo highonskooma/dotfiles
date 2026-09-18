@@ -41,6 +41,7 @@ window#waybar.hidden {
 #battery,
 #idle_inhibitor,
 #custom-playerctl,
+#custom-lastfm,
 #custom-power-menu,
 #custom-wallpaper,
 #custom-launcher,
@@ -71,6 +72,12 @@ window#waybar.hidden {
 }
 
 #custom-playerctl {
+  color: @color11;
+  padding: 0 20px 0 20px;
+  margin-left: 8px;
+}
+
+#custom-lastfm {
   color: @color11;
   padding: 0 20px 0 20px;
   margin-left: 8px;

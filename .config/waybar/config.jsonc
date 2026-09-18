@@ -8,6 +8,7 @@
 	],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": [
+    "custom/lastfm",
 		"tray",
 		// "custom/theme",
 		"custom/wallpaper",
@@ -28,10 +29,10 @@
 		"format-icons": {
 			"1": "",
 			"2": "",
-			"3": "",
+			"3": "",
 			"4": "",
 			"5": "",
-			"6": "",
+			"6": "",
 			"urgent": "",
 			"default": ""
 		},
@@ -123,12 +124,14 @@
 	"custom/playerctl": {
 		"escape": "true",
 		"exec": "~/Scripts/music_panel.sh",
-		// "exec-if": "~/Scripts/playerctl-status.sh",
-		// "interval": 1,
 		"format": "{}",
 		"max-length": 40,
-		"on-click": "playerctl play-pause"
+		"on-click": "playerctl --player=sidra,rmpc,%any play-pause"
 	},
+  "custom/lastfm": {
+		"exec": "curl 'http://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=highonskooma&api_key=fb0f003095d4467ea9898eed211bf75b&format=json' | jq -r '.user.playcount'",
+		"format": "Scrobbles: {}"
+  },
 	"custom/weather": {
 		"exec": "python3 ~/.config/waybar/scripts/weather.py",
 		"restart-interval": 300,

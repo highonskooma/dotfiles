@@ -5,7 +5,6 @@ hl.window_rule({
 
 	suppress_event = "maximize",
 })
--- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule({
 	match = { class = "floating" },
@@ -29,10 +28,28 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
-		class = "^(org.gnome.FileRoller)$",
+		title = "^(galculator)$",
+	},
+	float = true,
+	size = { 400, 400 },
+})
+
+hl.window_rule({
+	match = {
+		class = "^(org.gnome.FileRoller|xdg-desktop-portal-gtk)$",
 	},
 	float = true,
 	size = { 1200, 700 },
+	center = true,
+})
+
+hl.window_rule({
+	match = {
+		class = "^(hyprland-share-picker)$",
+	},
+	float = true,
+	size = { 600, 400 },
+	center = true,
 })
 
 hl.window_rule({
@@ -70,14 +87,6 @@ hl.window_rule({
 
 	no_focus = true,
 })
-
--- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
 
 -- Hyprland-run windowrule
 hl.window_rule({

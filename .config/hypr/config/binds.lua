@@ -13,7 +13,6 @@ hl.bind(vars.mainMod .. " + T", hl.dsp.exec_cmd(vars.fileManager))
 hl.bind(vars.mainMod .. " + V", hl.dsp.window.float({ action = "toggle" })) -- should be: exec, hyprctl --batch "dispatch togglefloating ; dispatch centerwindow 1"
 hl.bind(vars.mainMod .. " + D", hl.dsp.exec_cmd(vars.menu))
 hl.bind(vars.mainMod .. " + P", hl.dsp.window.pseudo())
--- hl.bind(vars.mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(vars.mainMod .. " + F", hl.dsp.window.fullscreen())
 
 -- Move focus with vars.mainMod + arrow keys
@@ -27,6 +26,9 @@ hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-2" })
 hl.workspace_rule({ workspace = "2", monitor = "HDMI-A-2" })
 hl.workspace_rule({ workspace = "3", monitor = "HDMI-A-2" })
 hl.workspace_rule({ workspace = "4", monitor = "DP-1" })
+hl.workspace_rule({ workspace = "5", monitor = "DP-1" })
+hl.workspace_rule({ workspace = "6", monitor = "DP-1" })
+hl.workspace_rule({ workspace = "7", monitor = "DP-1" })
 
 hl.bind(vars.mainMod .. " + " .. 1, hl.dsp.focus({ monitor = "HDMI-A-2" }))
 hl.bind(vars.mainMod .. " + " .. 1, hl.dsp.focus({ workspace = "1" }))
@@ -38,6 +40,10 @@ hl.bind(vars.mainMod .. " + " .. 4, hl.dsp.focus({ monitor = "DP-1" }))
 hl.bind(vars.mainMod .. " + " .. 4, hl.dsp.focus({ workspace = "4" }))
 hl.bind(vars.mainMod .. " + " .. 5, hl.dsp.focus({ monitor = "DP-1" }))
 hl.bind(vars.mainMod .. " + " .. 5, hl.dsp.focus({ workspace = "5" }))
+hl.bind(vars.mainMod .. " + " .. 6, hl.dsp.focus({ monitor = "DP-1" }))
+hl.bind(vars.mainMod .. " + " .. 6, hl.dsp.focus({ workspace = "6" }))
+hl.bind(vars.mainMod .. " + " .. 7, hl.dsp.focus({ monitor = "DP-1" }))
+hl.bind(vars.mainMod .. " + " .. 7, hl.dsp.focus({ workspace = "7" }))
 
 -- Move active window to a workspace with vars.mainMod + SHIFT + [0-9]
 hl.bind(vars.mainMod .. " + SHIFT + " .. 1, hl.dsp.window.move({ workspace = 1 }))
@@ -45,6 +51,8 @@ hl.bind(vars.mainMod .. " + SHIFT + " .. 2, hl.dsp.window.move({ workspace = 2 }
 hl.bind(vars.mainMod .. " + SHIFT + " .. 3, hl.dsp.window.move({ workspace = 3 }))
 hl.bind(vars.mainMod .. " + SHIFT + " .. 4, hl.dsp.window.move({ workspace = 4 }))
 hl.bind(vars.mainMod .. " + SHIFT + " .. 5, hl.dsp.window.move({ workspace = 5 }))
+hl.bind(vars.mainMod .. " + SHIFT + " .. 6, hl.dsp.window.move({ workspace = 6 }))
+hl.bind(vars.mainMod .. " + SHIFT + " .. 7, hl.dsp.window.move({ workspace = 7 }))
 
 -- Swap window positions directional
 hl.bind(vars.mainMod .. " + left", hl.dsp.window.swap({ direction = "left" }))
@@ -74,7 +82,6 @@ hl.bind(vars.mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(vars.mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Laptop multimedia keys for volume and LCD brightness
--- binde =, XF86AudioLowerVolume, exec, wpctl set-volume --limit 1.5 @DEFAULT_AUDIO_SINK@ 1%- && volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{printf "%d", $2 * 100}') && dunstify -h string:x-canonical-private-synchronous:volume "Volume: ${volume}%" -h int:value:"$volume"
 hl.bind(
 	"XF86AudioRaiseVolume",
 	hl.dsp.exec_cmd(
@@ -108,7 +115,23 @@ hl.bind(
 	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
 	{ locked = true, repeating = true }
 )
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true, repeating = true })
+hl.bind(
+	"XF86AudioPlay",
+	hl.dsp.exec_cmd("playerctl --player=sidra,rmpc,%any play-pause"),
+	{ locked = true, repeating = true }
+)
+
+hl.bind(
+	"XF86AudioNext",
+	hl.dsp.exec_cmd("playerctl --player=sidra,rmpc,%any next"),
+	{ locked = true, repeating = true }
+)
+
+hl.bind(
+	"XF86AudioPrev",
+	hl.dsp.exec_cmd("playerctl --player=sidra,rmpc,%any previous"),
+	{ locked = true, repeating = true }
+)
 
 -- Brightness
 hl.bind(
@@ -140,10 +163,6 @@ hl.bind(vars.mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("swaync-client -t -sw"))
 -- Main monitor refresh rate (dark souls 3 workaround)
 hl.bind(vars.mainMod .. " + G", hl.dsp.exec_cmd("~/Scripts/frame-rate-toggle.sh game"))
 hl.bind(vars.mainMod .. " + SHIFT + G", hl.dsp.exec_cmd("~/Scripts/frame-rate-toggle.sh normal"))
-
--- Requires playerctl
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Screenshot utilities
 hl.bind("Print", hl.dsp.exec_cmd("grimblast --freeze copysave area"))
